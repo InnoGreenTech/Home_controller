@@ -1,0 +1,152 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Home controller"
+Date "2020-04-12"
+Rev ""
+Comp "InnoGreenTech"
+Comment1 "Montage Sans PCB"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L arduino:Arduino_Mega2560_Shield XA?
+U 1 1 5E934A6B
+P 5100 3550
+F 0 "XA?" H 5100 1170 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 5100 1064 60  0000 C CNN
+F 2 "" H 5800 6300 60  0001 C CNN
+F 3 "" H 5800 6300 60  0001 C CNN
+	1    5100 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L wemos_mini:ESP8266_S U?
+U 1 1 5E934BB2
+P 2200 1450
+F 0 "U?" H 2528 1347 60  0000 L CNN
+F 1 "ESP8266_S" H 2528 1241 60  0000 L CNN
+F 2 "" H 2300 750 60  0000 C CNN
+F 3 "" H 2300 750 60  0000 C CNN
+	1    2200 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF:NRF24L01_Breakout U?
+U 1 1 5E935281
+P 8700 5100
+F 0 "U?" H 9178 5078 50  0000 L CNN
+F 1 "NRF24L01_Breakout" H 9178 4987 50  0000 L CNN
+F 2 "RF_Module:nRF24L01_Breakout" H 8850 5700 50  0001 L CIN
+F 3 "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf" H 8700 5000 50  0001 C CNN
+	1    8700 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4800 7300 4800
+Wire Wire Line
+	7300 4800 7300 5500
+Wire Wire Line
+	7300 5500 6400 5500
+Wire Wire Line
+	8200 4900 7200 4900
+Wire Wire Line
+	7200 4900 7200 5400
+Wire Wire Line
+	7200 5400 6400 5400
+Wire Wire Line
+	8200 5000 7400 5000
+Wire Wire Line
+	7400 5000 7400 5600
+Wire Wire Line
+	7400 5600 6400 5600
+Wire Wire Line
+	6400 5200 7000 5200
+Wire Wire Line
+	7000 5200 7000 5100
+Wire Wire Line
+	7000 5100 8200 5100
+Wire Wire Line
+	8200 5300 6400 5300
+$Comp
+L power:GND #PWR?
+U 1 1 5E9356F7
+P 8700 5800
+F 0 "#PWR?" H 8700 5550 50  0001 C CNN
+F 1 "GND" H 8705 5627 50  0000 C CNN
+F 2 "" H 8700 5800 50  0001 C CNN
+F 3 "" H 8700 5800 50  0001 C CNN
+	1    8700 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E93571F
+P 3000 4900
+F 0 "#PWR?" H 3000 4650 50  0001 C CNN
+F 1 "GND" H 3005 4727 50  0000 C CNN
+F 2 "" H 3000 4900 50  0001 C CNN
+F 3 "" H 3000 4900 50  0001 C CNN
+	1    3000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E935747
+P 2150 2500
+F 0 "#PWR?" H 2150 2250 50  0001 C CNN
+F 1 "GND" H 2155 2327 50  0000 C CNN
+F 2 "" H 2150 2500 50  0001 C CNN
+F 3 "" H 2150 2500 50  0001 C CNN
+	1    2150 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E93579E
+P 8700 4300
+F 0 "#PWR?" H 8700 4150 50  0001 C CNN
+F 1 "+3.3V" H 8715 4473 50  0000 C CNN
+F 2 "" H 8700 4300 50  0001 C CNN
+F 3 "" H 8700 4300 50  0001 C CNN
+	1    8700 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E9357CD
+P 1600 1900
+F 0 "#PWR?" H 1600 1750 50  0001 C CNN
+F 1 "+5V" H 1615 2073 50  0000 C CNN
+F 2 "" H 1600 1900 50  0001 C CNN
+F 3 "" H 1600 1900 50  0001 C CNN
+	1    1600 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2200 2150 2500
+Wire Wire Line
+	2050 2200 2050 2300
+Wire Wire Line
+	2050 2300 1600 2300
+Wire Wire Line
+	1600 2300 1600 1900
+Wire Wire Line
+	2350 2200 3500 2200
+Wire Wire Line
+	3500 2200 3500 1900
+Wire Wire Line
+	3500 1900 3800 1900
+Wire Wire Line
+	3800 1800 3350 1800
+Wire Wire Line
+	3350 1800 3350 2400
+Wire Wire Line
+	3350 2400 2250 2400
+Wire Wire Line
+	2250 2400 2250 2200
+$EndSCHEMATC

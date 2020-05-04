@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328old",
+    "sketch": "Soft_VMC_home.ino"
+}

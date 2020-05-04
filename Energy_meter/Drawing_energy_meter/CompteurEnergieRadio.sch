@@ -1,0 +1,317 @@
+EESchema Schematic File Version 4
+LIBS:CompteurEnergieRadio-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CompteurEnergieRadio-rescue:Arduino_Nano_Socket XA1
+U 1 1 5BA93179
+P 6050 3150
+F 0 "XA1" V 6150 3150 60  0000 C CNN
+F 1 "Arduino_Nano_Socket" V 5950 3150 60  0000 C CNN
+F 2 "mysensors_radios:Arduino_Nano_2" H 7850 6900 60  0001 C CNN
+F 3 "" H 7850 6900 60  0001 C CNN
+	1    6050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CompteurEnergieRadio-rescue:NRF24L01_Breakout U1
+U 1 1 5BA931F8
+P 8950 2300
+F 0 "U1" H 8600 2800 50  0000 L CNN
+F 1 "NRF24L01_Breakout" H 9100 2800 50  0000 L CNN
+F 2 "RF_Modules:nRF24L01_Breakout" H 9100 2900 50  0001 L CIN
+F 3 "" H 8950 2200 50  0000 C CNN
+	1    8950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CompteurEnergieRadio-rescue:OLED_I2C_128X64_096IN U2
+U 1 1 5BA941EF
+P 2800 2800
+F 0 "U2" H 2800 2150 50  0000 C CNN
+F 1 "OLED_I2C_128X64_096IN" H 2800 3150 50  0000 C CNN
+F 2 "Display:96OLEDV2" H 2650 2500 50  0001 C CNN
+F 3 "" H 2650 2500 50  0001 C CNN
+	1    2800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BA94FF3
+P 6850 1000
+F 0 "#PWR01" H 6850 850 50  0001 C CNN
+F 1 "+5V" H 6850 1140 50  0000 C CNN
+F 2 "" H 6850 1000 50  0001 C CNN
+F 3 "" H 6850 1000 50  0001 C CNN
+	1    6850 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BA95010
+P 6850 1300
+F 0 "#PWR02" H 6850 1050 50  0001 C CNN
+F 1 "GND" H 6850 1150 50  0000 C CNN
+F 2 "" H 6850 1300 50  0001 C CNN
+F 3 "" H 6850 1300 50  0001 C CNN
+	1    6850 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5BAA90BF
+P 8950 2900
+F 0 "#PWR03" H 8950 2650 50  0001 C CNN
+F 1 "GND" H 8950 2750 50  0000 C CNN
+F 2 "" H 8950 2900 50  0001 C CNN
+F 3 "" H 8950 2900 50  0001 C CNN
+	1    8950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR04
+U 1 1 5BAA9376
+P 8950 1550
+F 0 "#PWR04" H 8950 1400 50  0001 C CNN
+F 1 "+3.3V" H 8950 1690 50  0000 C CNN
+F 2 "" H 8950 1550 50  0001 C CNN
+F 3 "" H 8950 1550 50  0001 C CNN
+	1    8950 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5BAA9612
+P 4200 3850
+F 0 "#PWR05" H 4200 3700 50  0001 C CNN
+F 1 "+3.3V" H 4200 3990 50  0000 C CNN
+F 2 "" H 4200 3850 50  0001 C CNN
+F 3 "" H 4200 3850 50  0001 C CNN
+	1    4200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 5BAAA32D
+P 3650 2750
+F 0 "#PWR06" H 3650 2600 50  0001 C CNN
+F 1 "+5V" H 3650 2890 50  0000 C CNN
+F 2 "" H 3650 2750 50  0001 C CNN
+F 3 "" H 3650 2750 50  0001 C CNN
+	1    3650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5BAAA4E3
+P 3450 2650
+F 0 "#PWR07" H 3450 2400 50  0001 C CNN
+F 1 "GND" H 3450 2500 50  0000 C CNN
+F 2 "" H 3450 2650 50  0001 C CNN
+F 3 "" H 3450 2650 50  0001 C CNN
+	1    3450 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 2750 7350 2750
+Wire Wire Line
+	7700 1200 7700 2750
+Wire Wire Line
+	7550 2850 7350 2850
+Wire Wire Line
+	7550 1100 7550 2850
+Wire Wire Line
+	8950 1550 8950 1700
+Wire Wire Line
+	4750 3850 4200 3850
+Wire Wire Line
+	7350 3250 7900 3250
+Wire Wire Line
+	7900 3250 7900 2100
+Wire Wire Line
+	7900 2100 8450 2100
+Wire Wire Line
+	8450 2000 8050 2000
+Wire Wire Line
+	8050 2000 8050 3150
+Wire Wire Line
+	8050 3150 7350 3150
+Wire Wire Line
+	8450 2200 8150 2200
+Wire Wire Line
+	8150 2200 8150 3350
+Wire Wire Line
+	8150 3350 7350 3350
+Wire Wire Line
+	8450 2300 8250 2300
+Wire Wire Line
+	8450 2500 8350 2500
+Wire Wire Line
+	8350 2500 8350 3050
+Wire Wire Line
+	3100 2850 4750 2850
+Wire Wire Line
+	4750 2950 3100 2950
+Wire Wire Line
+	3100 3050 4750 3050
+Wire Wire Line
+	3650 2750 3100 2750
+Wire Wire Line
+	3450 2650 3100 2650
+Wire Wire Line
+	8250 2300 8250 2950
+Wire Wire Line
+	8250 2950 7350 2950
+Wire Wire Line
+	8350 3050 7350 3050
+$Comp
+L CompteurEnergieRadio-rescue:Alimentation230_5 P1
+U 1 1 5BCC8A38
+P 2750 1650
+F 0 "P1" H 3150 1900 60  0000 C CNN
+F 1 "Alimentation230/5" H 3150 1900 60  0000 C CNN
+F 2 "mysensors_radios:Alimentation5V" H 3150 1900 60  0001 C CNN
+F 3 "" H 3150 1900 60  0001 C CNN
+	1    2750 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR08
+U 1 1 5BCC8B6B
+P 3800 1650
+F 0 "#PWR08" H 3800 1500 50  0001 C CNN
+F 1 "+5V" H 3800 1790 50  0000 C CNN
+F 2 "" H 3800 1650 50  0001 C CNN
+F 3 "" H 3800 1650 50  0001 C CNN
+	1    3800 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5BCC8B71
+P 4050 1900
+F 0 "#PWR09" H 4050 1650 50  0001 C CNN
+F 1 "GND" H 4050 1750 50  0000 C CNN
+F 2 "" H 4050 1900 50  0001 C CNN
+F 3 "" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 1650 3800 1650
+Wire Wire Line
+	4050 1900 3550 1900
+$Comp
+L CompteurEnergieRadio-rescue:Screw_Terminal_01x04 J1
+U 1 1 5BCCA4A6
+P 1800 1650
+F 0 "J1" H 1800 1850 50  0000 C CNN
+F 1 "Power" H 1800 1350 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-4_P5.08mm" H 1800 1650 50  0001 C CNN
+F 3 "" H 1800 1650 50  0001 C CNN
+	1    1800 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 1650 2300 1650
+Wire Wire Line
+	2750 1900 2150 1900
+Wire Wire Line
+	2000 1900 2000 1750
+$Comp
+L power:GND #PWR010
+U 1 1 5BCCB9A8
+P 4550 3650
+F 0 "#PWR010" H 4550 3400 50  0001 C CNN
+F 1 "GND" H 4550 3500 50  0000 C CNN
+F 2 "" H 4550 3650 50  0001 C CNN
+F 3 "" H 4550 3650 50  0001 C CNN
+	1    4550 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 3650 4750 3650
+$Comp
+L power:+5V #PWR011
+U 1 1 5BCCBB82
+P 3900 3950
+F 0 "#PWR011" H 3900 3800 50  0001 C CNN
+F 1 "+5V" H 3900 4090 50  0000 C CNN
+F 2 "" H 3900 3950 50  0001 C CNN
+F 3 "" H 3900 3950 50  0001 C CNN
+	1    3900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3950 3900 3950
+$Comp
+L CompteurEnergieRadio-rescue:Screw_Terminal_01x04 J2
+U 1 1 5BCCBE0C
+P 1800 1000
+F 0 "J2" H 1800 1200 50  0000 C CNN
+F 1 "Puissance PZEM" H 1800 700 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-4_P5.08mm" H 1800 1000 50  0001 C CNN
+F 3 "" H 1800 1000 50  0001 C CNN
+	1    1800 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L CompteurEnergieRadio-rescue:Conn_01x04 J3
+U 1 1 5BCCBF85
+P 6250 1200
+F 0 "J3" H 6250 1400 50  0000 C CNN
+F 1 "Serie PZEM" H 6250 900 50  0000 C CNN
+F 2 "Connectors_JST:JST_EH_B04B-EH-A_04x2.50mm_Straight" H 6250 1200 50  0001 C CNN
+F 3 "" H 6250 1200 50  0001 C CNN
+	1    6250 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 1200 6450 1200
+Wire Wire Line
+	2000 1100 2150 1100
+Wire Wire Line
+	2150 1100 2150 1900
+Connection ~ 2150 1900
+Wire Wire Line
+	2000 1000 2300 1000
+Wire Wire Line
+	2300 1000 2300 1650
+Connection ~ 2300 1650
+Wire Wire Line
+	2000 1550 2550 1550
+Wire Wire Line
+	2550 1550 2550 900 
+Wire Wire Line
+	2550 900  2000 900 
+Wire Wire Line
+	2000 1450 2650 1450
+Wire Wire Line
+	2650 1450 2650 800 
+Wire Wire Line
+	2650 800  2000 800 
+Wire Wire Line
+	6850 1000 6450 1000
+Wire Wire Line
+	7550 1100 6450 1100
+Wire Wire Line
+	6850 1300 6450 1300
+Wire Wire Line
+	4750 3650 4750 3750
+Wire Wire Line
+	2150 1900 2000 1900
+Wire Wire Line
+	2300 1650 2750 1650
+$EndSCHEMATC
