@@ -4,7 +4,7 @@ void weather(){
 
   /* creat a houre arrow to forecasts_weather */
 
-  if (current_sample_pressure<total_samples_pressure){current_sample_pressure++;current_average_pressure=current_average_pressure+(qIn/total_samples_pressure);}
+  if (current_sample_pressure<total_samples_pressure){current_sample_pressure++;current_average_pressure=current_average_pressure+(pOut/total_samples_pressure);}
   else{
     rotate_index++;
     if (rotate_index>NUMBER_SAMPLES_HOUR){rotate_index=0;}
