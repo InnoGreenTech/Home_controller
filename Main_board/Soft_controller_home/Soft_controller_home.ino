@@ -1,4 +1,4 @@
-/*******************************
+ /*******************************
  *     Utility library         *
  *******************************/
     
@@ -217,11 +217,10 @@
 
 /* meteo memory */
     #define         NUMBER_SAMPLES_HOUR 12
-    #define         DELAY_REFRESH_DATA DELAY_REFRESH_SCREEN
-
+    
     float           average_pressure[NUMBER_SAMPLES_HOUR];            // take x samples per hour
     float           current_average_pressure;
-    int             total_samples_pressure=int((3600/DELAY_REFRESH_DATA)/NUMBER_SAMPLES_HOUR);
+    int             total_samples_pressure=int((3600/DELAY_REFRESH_SCREEN_SECONDS)/NUMBER_SAMPLES_HOUR);
     int             current_sample_pressure;
     byte            rotate_index=0;     
 

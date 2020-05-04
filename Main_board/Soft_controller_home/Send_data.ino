@@ -29,7 +29,7 @@ if (radio.available()){
          
          donnee= (long)trans[0]|(long)trans[1]<<8|(long)trans[2]<<16|(long)trans[3]<<24;
 
-         Serial.print(type_requiest);Serial.print(":REPONSE:");Serial.println(donnee);
+         //Serial.print(type_requiest);Serial.print(":REPONSE:");Serial.println(donnee);
 
          Serial2.print(CODE_COMMAND_INFO);
 
