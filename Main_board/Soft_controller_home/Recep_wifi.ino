@@ -26,6 +26,7 @@ void recep_wifi(){
                             a=Serial2.read();
                             what+=(char)a;
                           }
+                         
                         what_is=what.toInt(); 
                         
    
@@ -34,6 +35,7 @@ void recep_wifi(){
                         a=Serial2.read();
                         if (a!='$'){content += (char) a;}
                         }
+                        Serial2.flush();
 
 
                   switch(what_is){         
