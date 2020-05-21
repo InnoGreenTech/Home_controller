@@ -20,7 +20,8 @@ A optional ESP8266, allow to sent data with a Json file and it is possible to co
 I share also the drawing, the pcb, and the box designe in this repository.
 
 
-![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/gestionnaire.png)
+![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/screen_one.png)
+
 
 
 Contributing:
