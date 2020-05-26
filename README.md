@@ -20,9 +20,19 @@ A optional ESP8266, allow to sent data with a Json file and it is possible to co
 I share also the drawing, the pcb, and the box designe in this repository.
 
 
-![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/gestionnaire.png)
+Screen interface:
+----------------
+![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/screen_one.jpg)
 
-![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/box_vmc_card.png)
+Remote VMC:
+----------------
+
+![Picture of current status](https://innogreentech.fr/images/Photos/Gestionnaire%20maison/remote_vmc.JPG)
+
+Remote energie meter:
+----------------
+
+![Picture of current status](https://innogreentech.fr/images/Photos/Mesure%20de%20puissance/compteur.png)
 
 
 
