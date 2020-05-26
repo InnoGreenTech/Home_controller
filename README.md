@@ -32,7 +32,7 @@ Remote VMC:
 Remote energie meter:
 ----------------
 
-![Picture of current status](https://innogreentech.fr/images/Photos/Mesure%20de%20puissance/compteur.png)
+![Picture of current status](https://innogreentech.fr/images/Photos/Mesure%20de%20puissance/compteur.jpg)
 
 
 
