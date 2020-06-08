@@ -225,10 +225,6 @@ F 3 "" H 1800 1650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2000 1650 2300 1650
-Wire Wire Line
-	2750 1900 2150 1900
-Wire Wire Line
 	2000 1900 2000 1750
 $Comp
 L power:GND #PWR010
@@ -281,16 +277,6 @@ $EndComp
 Wire Wire Line
 	7700 1200 6450 1200
 Wire Wire Line
-	2000 1100 2150 1100
-Wire Wire Line
-	2150 1100 2150 1900
-Connection ~ 2150 1900
-Wire Wire Line
-	2000 1000 2300 1000
-Wire Wire Line
-	2300 1000 2300 1650
-Connection ~ 2300 1650
-Wire Wire Line
 	2000 1550 2550 1550
 Wire Wire Line
 	2550 1550 2550 900 
@@ -311,7 +297,21 @@ Wire Wire Line
 Wire Wire Line
 	4750 3650 4750 3750
 Wire Wire Line
+	2000 1000 2300 1000
+Wire Wire Line
+	2000 1100 2150 1100
+Wire Wire Line
 	2150 1900 2000 1900
+Wire Wire Line
+	2750 1900 2150 1900
+Connection ~ 2150 1900
+Wire Wire Line
+	2150 1100 2150 1900
+Wire Wire Line
+	2300 1000 2300 1650
+Wire Wire Line
+	2000 1650 2300 1650
+Connection ~ 2300 1650
 Wire Wire Line
 	2300 1650 2750 1650
 $EndSCHEMATC

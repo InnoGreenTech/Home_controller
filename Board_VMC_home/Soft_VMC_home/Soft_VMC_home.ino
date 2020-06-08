@@ -1,3 +1,23 @@
+ /************************************************************************************
+    
+    <VMC speed main board control,>
+    Copyright (C) <2019>  <Fabrice BAUDIN>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    info@InnoGreenTech.fr
+
+****************************************************************************************//*******************************
 /************************************************
  * Watch doog
  *********************************************/
@@ -69,6 +89,7 @@
     long  pOut=10000; // 
 
     long venti=1; //Valeur la ventilation actuelle( 0= Arrêt; 1;2;3)
+    long venti_last=0; // fan speed before new scheck
     long vt; // vitesse théorique demandée pour la régulation de  température (de 0 à  3)
     long vh; // vitesse  théorique pour la régulation de l'humidité
     long vq; // vitesse théorique pour la régulation de la qualité de lair
@@ -124,6 +145,14 @@
     #define         CODE_IP                       33      // Adresse IP de connexion
     #define         CODE_GATE_WAY                 34      // Code pour la passerelle
     #define         CODE_MAC                      35      // Adresse MAC du modul wifi
+
+    /*#include <SoftwareSerial.h>
+
+    
+#define MH_Z19_RX D7
+#define MH_Z19_TX D6
+
+SoftwareSerial co2Serial(MH_Z19_RX, MH_Z19_TX);*/
     
 
 
@@ -208,17 +237,15 @@ void setup() {
 
 /* Start  watch doog */
 
-  wdt_reset();
-  bitClear(MCUSR, WDRF);            // Reset du chien de garde
-  WDTCSR = (1 << WDCE) | (1 << WDE);   //  Demande de réglage du chien de garde
-  WDTCSR =(1<<WDIE)| (1 << WDE)| (0<<WDIF) | (1 << WDP3) | (0 << WDP2)| (0 << WDP1)| (1<< WDP0) ; // Activation Delay 1 seconde 
+
+  wdt_enable(WDTO_4S);
   
  
 
 /*Set and start BME280 sensor, sensor out*/
 
   bme_out.settings.commInterface = I2C_MODE;  // I have worked with the example of http://gilles.thebault.free.fr/
-  bme_out.settings.I2CAddress = 0x76;
+  bme_out.settings.I2CAddress = 0x76;         // 0x77 or 0x76
   bme_out.settings.runMode = 3; 
   bme_out.settings.tStandby = 0;
   bme_out.settings.filter = 0;
@@ -227,6 +254,7 @@ void setup() {
   bme_out.settings.humidOverSample = 1;
   delay(10); 
   bme_out.begin();  
+
 
 }
 

@@ -12,7 +12,7 @@ void fan_control(){
                 break;
         
              case 2:
-                if(qIn<set_co2*0.9){vq=1;}
+                if(qIn<set_co2*0.8){vq=1;}
                 if(qIn>set_co2*1.2){vq=3;}
                 break;
         
@@ -120,9 +120,12 @@ void fan_control(){
     if (set_mode==5){venti=2;} //Mode Forcée à 2
     if (set_mode==6){venti=3;} //Mode Forcée à 3
 //    if (venti==0 && set_mode>0){venti=1;}// Forçage à 1 de la ventilation si changement de mode
-   
-   if (venti==0){digitalWrite(R1,LOW);digitalWrite(R2,LOW);digitalWrite(R3,LOW);} // arrêt ventilation
-   if (venti==1){digitalWrite(R2,LOW);digitalWrite(R3,LOW);delay (200);digitalWrite(R1,HIGH);} // Vitesse 1
-   if (venti==2){digitalWrite(R1,LOW);digitalWrite(R3,LOW);delay (200);digitalWrite(R2,HIGH);} // Vitesse 2
-   if (venti==3){digitalWrite(R1,LOW);digitalWrite(R2,LOW);delay (200);digitalWrite(R3,HIGH);} // Vitesse 3
+   if (venti_last!=venti){
+       if (venti==0){digitalWrite(R1,LOW);digitalWrite(R2,LOW);digitalWrite(R3,LOW);} // arrêt ventilation
+       if (venti==1){digitalWrite(R2,LOW);digitalWrite(R3,LOW);delay (1000);digitalWrite(R1,HIGH);} // Vitesse 1
+       if (venti==2){digitalWrite(R1,LOW);digitalWrite(R3,LOW);delay (1000);digitalWrite(R2,HIGH);} // Vitesse 2
+       if (venti==3){digitalWrite(R1,LOW);digitalWrite(R2,LOW);delay (1000);digitalWrite(R3,HIGH);} // Vitesse 3
+   }
+
+   venti_last=venti;
   }

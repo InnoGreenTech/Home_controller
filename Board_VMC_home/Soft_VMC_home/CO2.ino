@@ -10,6 +10,8 @@ int read_co2() {
 
   // The serial stream can get out of sync. The response starts with 0xff, try to resync.
 
+  delay(100);
+
   if(Serial.available()){
   while (Serial.available() > 0 && (unsigned char)Serial.peek() != 0xFF) {
     Serial.read();
