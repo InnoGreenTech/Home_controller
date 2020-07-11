@@ -20,7 +20,7 @@ void send_data(){
 
       
        
-     const size_t bufferSize =JSON_OBJECT_SIZE(14);
+     const size_t bufferSize =JSON_OBJECT_SIZE(15);
      DynamicJsonDocument root(bufferSize);
      
      root["mac_adress"]=WiFi.macAddress();

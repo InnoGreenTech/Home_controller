@@ -55,7 +55,7 @@ String indexPage(){
                                  page +=venti;
                                  page +=F(" </li></ul></section>");
                            
-                                 page +=F("<section id='energie'><h2> Compteur d'énergie  </h2><ul><li>Tension: ");
+                                 page +=F("<section id='energ'><h2> Compteur d'énergie  </h2><ul><li>Tension: ");
                                  page +=u;
                                  page +=F(" Volts</li><li>Courant: ");
                                  page +=i;
