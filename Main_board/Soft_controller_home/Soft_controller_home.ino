@@ -63,8 +63,11 @@
  **************************/
 
     #include <Adafruit_GFX.h>       // Librairie pour dessin
-    #include <Adafruit_TFTLCD.h>    //librairie de configuration écran
     #include <Fonts/WeatherIcon.h>
+    #include <Adafruit_GFX.h>       // Librairie pour dessin
+    //#include <Adafruit_TFTLCD.h>  //librairie de configuration Ã©cran
+    #include <MCUFRIEND_kbv.h>      //librairie de configuration Ã©cran HX8347
+    MCUFRIEND_kbv tft;
 
     
     /* Pin setting */
@@ -92,7 +95,7 @@
     
     #define FOND    0x0000        // Back colors
 
-    Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET);
+    //Adafruit_TFTLCD tft(LCD_CS, LCD_CD, LCD_WR, LCD_RD, LCD_RESET);
 
 
 /**********************************
