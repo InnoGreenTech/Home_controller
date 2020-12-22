@@ -259,12 +259,14 @@ void setup() {
 
               carac='1';                
               a=0;
-              while (!(carac=='\0')&&a<100){carac=char (EEPROM.read(MEM_SSID+a));if (!(carac=='\0')){ssid +=carac;} a++;}  //récupération du lien d'information
+              while (!(carac=='\0')&&a<100){carac=char (EEPROM.read(MEM_SSID+a));
+              if (!(carac=='\0')){ssid +=carac;} a++;}  //récupération du lien d'information
               if (ssid=='\0'||a>50){ssid=F("");}
             
               carac='1';
               a=0;
-              while (!(carac=='\0')&&a<100){carac=char (EEPROM.read(MEM_PASSWORD+a));if (!(carac=='\0')){password +=carac;} a++;}  //récupération du lien d'information
+              while (!(carac=='\0')&&a<100){carac=char (EEPROM.read(MEM_PASSWORD+a));
+              if (!(carac=='\0')){password +=carac;} a++;}  //récupération du lien d'information
               if (password=='\0'||a>50){password=F("");}
 
 
