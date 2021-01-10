@@ -18,19 +18,24 @@
     info@InnoGreenTech.fr
 
 ****************************************************************************************//*******************************/
-/* Configuration du wattmètre */
+/* Configuration du wattmètre 
 
 #include <SoftwareSerial.h> // Arduino IDE <1.6.6
 #include <PZEM004T.h>
 
 
 PZEM004T pzem(7,8);  // (RX,TX) connect to TX,RX of PZEM
-IPAddress ip(192,168,1,1);
+
+IPAddress ip(192,168,1,1); */
+
+#include <PZEM004Tv30.h>
+
+PZEM004Tv30 pzem(7, 8);
 
 float v;  // valeur de la tension
 float i;  // Valeur du courant
-long p;  //puissance instantanée
-long e;    //puissance consommée
+long  p;  //puissance instantanée
+long  e;    //puissance consommée
 
 /* Configuration de l'écran */
 
@@ -67,9 +72,9 @@ unsigned long refreshScreen;      // taux de rafraîchissement de l'écran
 #include <printf.h>
 #include <RF24.h>
 #include <RF24_config.h>
-#define CERF 10             // Définition de la pin Enable
-#define CSRF 9               // Définition de la pin Sélection,
-RF24 radio(CERF,CSRF);        // Entrée des informations dans la librairie
+#define  CERF 10             // Définition de la pin Enable
+#define  CSRF 9               // Définition de la pin Sélection,
+RF24     radio(CERF,CSRF);        // Entrée des informations dans la librairie
 
 
 /********variable d'échange avec la carte mére*******************/
@@ -105,7 +110,7 @@ void setup() {
   delay(250);
   Serial.begin(9600);
 
-  pzem.setAddress(ip);
+ // pzem.setAddress(ip);
   
 
   // Mise en service de l'affichage
@@ -148,17 +153,17 @@ if (millis()>refreshScreen+REFRESH)
       display.setTextColor(BLACK, WHITE);
       display.setTextColor(WHITE);
       display.setCursor(0,0);
-      v = pzem.voltage(ip);
+      v = pzem.voltage();
       if (v < 0.0) v = 0.0;
       display.print(v);display.println(" V");
 
-      i = pzem.current(ip);
+      i = pzem.current();
       display.print(i);display.println(" A"); 
       
-      p = pzem.power(ip);
+      p = pzem.power();
       display.print(p);display.println(" W"); 
       
-      e = pzem.energy(ip);
+      e = pzem.energy();
       float ke= float(e)/1000;
       display.print((ke));display.println(" kWh"); 
       display.display();
